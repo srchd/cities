@@ -44,5 +44,12 @@
     <Text Include="inp7.txt" />
     <Text Include="inp8.txt" />
     <Text Include="inp9.txt" />
+    <Text Include="inp10.txt" />
+    <Text Include="inp11.txt" />
+    <Text Include="inp12.txt" />
+    <Text Include="inp13.txt" />
+    <Text Include="inp14.txt" />
+    <Text Include="inp15.txt" />
+    <Text Include="inp16.txt" />
   </ItemGroup>
 </Project>

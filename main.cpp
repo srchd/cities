@@ -297,9 +297,130 @@ TEST_CASE("city starts in avg, with tourists, decreasing after second year", "in
 	CHECK(c->type() == "avg");
 	CHECK((c->get_state() <= 67 && c->get_state() >= 34));
 
-	catch_simulate(_t, c1);
+	catch_simulate(_t, c);
 	CHECK(c->type() == "bad");
 	CHECK((c->get_state() <= 33 && c->get_state() >= 1));
+
+	destroy(_t);
+}
+TEST_CASE("city starts in avg, with tourists, increasing after first year", "inp10.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp10.txt", c, _t, _y);
+
+	CHECK(c->type() == "avg");
+	CHECK(c->get_state() == 60);
+	CHECK_FALSE(_t.size() == 0);
+
+	catch_simulate(_t, c);
+	CHECK(c->type() == "good");
+	CHECK((c->get_state() <= 100 && c->get_state() >= 68));
+
+	destroy(_t);
+}
+
+TEST_CASE("city starts in avg, with tourists, increasing after second year", "inp11.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp11.txt", c, _t, _y);
+
+	CHECK(c->type() == "avg");
+	CHECK(c->get_state() == 50);
+	CHECK_FALSE(_t.size() == 0);
+
+	catch_simulate(_t, c);
+	CHECK(c->type() == "avg");
+
+	catch_simulate(_t, c);
+	CHECK(c->type() == "good");
+	CHECK((c->get_state() <= 100 && c->get_state() >= 68));
+
+	destroy(_t);
+}
+//=================================================================== STARTS IN GOOD =========================================
+TEST_CASE("city starts in good, no tourists", "inp12.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp12.txt", c, _t, _y);
+
+	CHECK(c->type() == "good");
+	CHECK(_t.size() == 0);
+
+	//destroy_citi_states();
+	destroy(_t);
+}
+TEST_CASE("city starts in good, with tourists", "inp13.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp13.txt", c, _t, _y);
+
+	CHECK(c->type() == "good");
+	CHECK_FALSE(_t.size() == 0);
+
+	//destroy_citi_states();
+	destroy(_t);
+}
+TEST_CASE("city starts in good, with tourists, not decreasing", "inp14.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp14.txt", c, _t, _y);
+
+	CHECK(c->type() == "good");
+	CHECK_FALSE(_t.size() == 0);
+	int _s = 1;
+	while (_s <= _y) {
+		catch_simulate(_t, c);
+		_s++;
+		CHECK(c->type() == "good");
+		CHECK((c->get_state() <= 100 && c->get_state() >= 68));
+	}
+	CHECK(c->type() == "good");
+	CHECK((c->get_state() <= 100 && c->get_state() >= 68));
+
+	//destroy_citi_states();
+	destroy(_t);
+}
+TEST_CASE("city starts in good, with tourists, decreasing after first year", "inp15.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp15.txt", c, _t, _y);
+
+	CHECK(c->type() == "good");
+	CHECK_FALSE(_t.size() == 0);
+	int _s = 1;
+	while (_s <= _y) {
+		catch_simulate(_t, c);
+		_s++;
+		CHECK(c->type() == "avg");
+		CHECK((c->get_state() <= 67 && c->get_state() >= 34));
+	}
+	CHECK(c->type() == "avg");
+	CHECK((c->get_state() <= 67 && c->get_state() >= 34));
+	destroy(_t);
+}
+TEST_CASE("city starts in good, with tourists, decreasing after second year", "inp16.txt") {
+	City* c;
+	vector<Tourist*> _t;
+	int _y;
+	catch_read("inp16.txt", c, _t, _y);
+
+	CHECK(c->type() == "good");
+	CHECK(c->get_state() == 80);
+	CHECK_FALSE(_t.size() == 0);
+
+	catch_simulate(_t, c);
+	CHECK(c->type() == "good");
+	CHECK((c->get_state() <= 100 && c->get_state() >= 68));
+
+	catch_simulate(_t, c);
+	CHECK(c->type() == "avg");
+	CHECK((c->get_state() <= 67 && c->get_state() >= 34));
 
 	destroy(_t);
 }

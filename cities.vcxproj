@@ -157,6 +157,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="inp1.txt" />
+    <Text Include="inp10.txt" />
+    <Text Include="inp11.txt" />
+    <Text Include="inp12.txt" />
+    <Text Include="inp13.txt" />
+    <Text Include="inp14.txt" />
+    <Text Include="inp15.txt" />
+    <Text Include="inp16.txt" />
     <Text Include="inp2.txt" />
     <Text Include="inp3.txt" />
     <Text Include="inp4.txt" />
