@@ -1,4 +1,8 @@
-
+/*
+	-	Author: Sipos Richárd
+	-	Neptun: K9P7QZ
+	-	Task : simulate the change of a city, writing it ti stdout every year
+*/
 //#include <iostream>
 #include "city.h"
 #include "tourist.h"
@@ -68,8 +72,8 @@ void simulate(vector<Tourist*>& _t, City*& c, int _sim_y) {
 	cout << "====================== END OF YEAR " << _sim_y << " ========================================" << endl;
 }
 
-template <typename Item>
-void destroy(vector<Item*> &vec) {
+template <typename T>
+void destroy(vector<T*> &vec) {
 	for (unsigned int i = 0; i < vec.size(); i++) {
 		delete vec[i];
 	}
@@ -82,7 +86,7 @@ void destroy_citi_states() {
 }
 
 
-//#define NORMAL_MODE
+#define NORMAL_MODE
 #ifdef NORMAL_MODE
 
 int main(){
@@ -160,7 +164,6 @@ TEST_CASE("city starts in bad, no tourists", "inp1.txt") {
 	//destroy_citi_states();
 	destroy(_t);
 }
-
 TEST_CASE("city starts in bad, with tourists", "inp2.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -173,7 +176,6 @@ TEST_CASE("city starts in bad, with tourists", "inp2.txt") {
 	//destroy_citi_states();
 	destroy(_t);
 }
-
 TEST_CASE("city starts in bad, with tourists, not increasing", "inp3.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -195,7 +197,6 @@ TEST_CASE("city starts in bad, with tourists, not increasing", "inp3.txt") {
 	//destroy_citi_states();
 	destroy(_t);
 }
-
 TEST_CASE("city starts in bad, with japanese, can not increase", "inp4.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -215,7 +216,6 @@ TEST_CASE("city starts in bad, with japanese, can not increase", "inp4.txt") {
 	destroy(_t);
 }
 //================================================== STARTS IN AVG ====================================
-
 TEST_CASE("city starts in avg, no tourists", "inp5.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -261,8 +261,6 @@ TEST_CASE("city starts in avg, with tourists, not increasing/decreasing", "inp7.
 	//destroy_citi_states();
 	destroy(_t);
 }
-
-
 TEST_CASE("city starts in avg, with tourists, decreasing after first year", "inp8.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -282,7 +280,6 @@ TEST_CASE("city starts in avg, with tourists, decreasing after first year", "inp
 	CHECK((c->get_state() <= 33 && c->get_state() >= 1));
 	destroy(_t);
 }
-
 TEST_CASE("city starts in avg, with tourists, decreasing after second year", "inp9.txt") {
 	City* c;
 	vector<Tourist*> _t;
@@ -319,7 +316,6 @@ TEST_CASE("city starts in avg, with tourists, increasing after first year", "inp
 
 	destroy(_t);
 }
-
 TEST_CASE("city starts in avg, with tourists, increasing after second year", "inp11.txt") {
 	City* c;
 	vector<Tourist*> _t;

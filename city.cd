@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="City">
+    <Position X="7.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABABAAIAAhACAAAIAAhAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>city.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Good">
+    <Position X="13.5" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAAAAAAAAABACEAAIABhAAAAAgAAAAAAAAE=</HashCode>
+      <FileName>city.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Avg">
+    <Position X="4.25" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAAAAAAAAABACEAAIABhAAAAAgAAIAAAAAA=</HashCode>
+      <FileName>city.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bad">
+    <Position X="10.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAgAAAAAAABACEAAIABhAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>city.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ChangeTo">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAA=</HashCode>
+      <FileName>city.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

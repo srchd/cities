@@ -52,4 +52,8 @@
     <Text Include="inp15.txt" />
     <Text Include="inp16.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="tourists.cd" />
+    <None Include="city.cd" />
+  </ItemGroup>
 </Project>

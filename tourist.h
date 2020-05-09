@@ -1,4 +1,9 @@
 #pragma once
+/*
+	-	Author: Sipos Richárd
+	-	Neptun: K9P7QZ
+	-	Task : simulate the change of a city, writing it ti stdout every year
+*/
 #include "city.h"
 class Tourist {
 protected:

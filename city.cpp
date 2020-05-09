@@ -1,5 +1,10 @@
 #include "city.h"
 #include "tourist.h"
+/*
+	-	Author: Sipos Richárd
+	-	Neptun: K9P7QZ
+	-	Task : simulate the change of a city, writing it ti stdout every year
+*/
 
 using namespace std;
 
